@@ -1,6 +1,6 @@
 [project]
 name = "sparksneeze"
-version = "0.1.1"
+version = "0.1.2"
 description = "Strategy-based data warehouse transformations using Apache Spark with automatic metadata enrichment and schema evolution"
 readme = "README.md"
 authors = [
