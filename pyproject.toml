@@ -1,0 +1,40 @@
+[project]
+name = "sparksneeze"
+version = "0.1.1"
+description = "Strategy-based data warehouse transformations using Apache Spark with automatic metadata enrichment and schema evolution"
+readme = "README.md"
+authors = [
+    { name = "Merijn Douwes", email = "merijn@douwes.me" }
+]
+requires-python = ">=3.12.0"
+
+dependencies = [
+    "pyspark==4.0.0",
+    "delta-spark==4.0.0",
+    "structlog>=24.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/mdouwes/sparksneeze"
+Repository = "https://github.com/mdouwes/sparksneeze"
+Issues = "https://github.com/mdouwes/sparksneeze/issues"
+
+
+[project.optional-dependencies]
+test = ["pytest>=8.4.0", "pytest-cov>=6.1.1"]
+docs = ["sphinx>=5.0", "sphinx-rtd-theme", "myst-parser", "doc8", "sphinx-design"]
+dev = ["sparksneeze[test,docs]", "ruff", "black", "vulture", "ty"]
+
+[project.scripts]
+sparksneeze = "sparksneeze.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "beautifulsoup4>=4.13.4",
+    "requests>=2.32.3",
+    "sphinx-design>=0.6.1",
+]

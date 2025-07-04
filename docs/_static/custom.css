@@ -1,0 +1,181 @@
+/* Custom CSS for SparkSneeze Documentation */
+
+/* Brand colors inspired by logo */
+:root {
+    --sparksneeze-primary: #f39c12;  /* Orange from logo */
+    --sparksneeze-secondary: #2c3e50; /* Dark text color */
+    --sparksneeze-accent: #e67e22;    /* Darker orange accent */
+    --sparksneeze-text: #2c3e50;
+    --sparksneeze-bg: #ffffff;
+    --sparksneeze-light: #fdf6e3;     /* Light orange/cream */
+}
+
+/* Header logo integration */
+.wy-side-nav-search {
+    background: linear-gradient(135deg, var(--sparksneeze-primary) 0%, var(--sparksneeze-accent) 100%);
+}
+
+.wy-side-nav-search .wy-dropdown > a {
+    color: white;
+    font-weight: 600;
+}
+
+/* Add logo to the sidebar */
+.wy-side-nav-search::before {
+    content: '';
+    display: block;
+    background-image: url('logo.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Accent colors for links and highlights */
+.rst-content a {
+    color: var(--sparksneeze-accent);
+}
+
+.rst-content a:hover {
+    color: var(--sparksneeze-primary);
+}
+
+/* Navigation active states */
+.wy-menu-vertical li.current a {
+    border-right: 3px solid var(--sparksneeze-primary);
+    background: var(--sparksneeze-light);
+}
+
+.wy-menu-vertical li.current > a {
+    background: var(--sparksneeze-light);
+    color: var(--sparksneeze-secondary);
+}
+
+/* Code blocks with brand styling */
+.highlight {
+    border-left: 4px solid var(--sparksneeze-primary);
+}
+
+/* Admonitions with brand colors */
+.rst-content .admonition.note {
+    border-color: var(--sparksneeze-primary);
+}
+
+.rst-content .admonition.note .admonition-title {
+    background: var(--sparksneeze-primary);
+}
+
+/* Strategy matrix table styling */
+.strategy-matrix table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5em 0;
+}
+
+.strategy-matrix th {
+    background: var(--sparksneeze-primary);
+    color: white;
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.strategy-matrix td {
+    padding: 10px 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.strategy-matrix tr:nth-child(even) {
+    background: var(--sparksneeze-light);
+}
+
+/* Emoji and symbol styling */
+.strategy-matrix td:contains("✅") {
+    color: #27ae60;
+    font-size: 1.2em;
+}
+
+.strategy-matrix td:contains("❌") {
+    color: #e74c3c;
+    font-size: 1.2em;
+}
+
+/* Copy-to-clipboard styling */
+.highlight {
+    position: relative;
+}
+
+.highlight:hover .copy-btn {
+    opacity: 1;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: var(--sparksneeze-secondary);
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.copy-btn:hover {
+    background: var(--sparksneeze-primary);
+}
+
+/* Table styling improvements */
+table.docutils {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin: 1em 0;
+}
+
+table.docutils th,
+table.docutils td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+table.docutils th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+/* Code block improvements */
+.highlight pre {
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+/* Navigation improvements */
+.wy-nav-content {
+    max-width: none;
+}
+
+/* Strategy comparison styling */
+.strategy-matrix {
+    overflow-x: auto;
+}
+
+.strategy-matrix table {
+    min-width: 700px;
+}
+
+/* Toctree caption styling */
+.caption-text {
+    color: var(--sparksneeze-primary) !important;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}

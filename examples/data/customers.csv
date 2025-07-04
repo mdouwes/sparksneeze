@@ -1,0 +1,16 @@
+customer_id,name,age,location,payment_method,credit_rating,favorite_product,lifetime_spend,complaints
+1,Jacob Collins,22,Trailer Park,Cash,Poor,Hash,850.50,2
+2,Trinity,19,Trailer Park,Cash,Fair,Hash,1200.00,0
+3,Donny,45,Outside Park,Credit Card,Good,Liquor,2500.75,1
+4,Private Dancer,30,Strip Club,Cash,Poor,Liquor,500.00,0
+5,Philadelphia Collins,50,Dirty Burger,Cash,Fair,Pepperoni Sticks,180.25,3
+6,Sam Losco,35,Veterinary Clinic,Credit Card,Excellent,Kitty Food,300.00,0
+7,Officer Green,40,Police Station,Credit Card,Excellent,Nothing,0.00,5
+8,Barb Lahey,48,Lahey's Trailer,Credit Card,Good,Liquor,800.00,1
+9,Candy,25,Strip Club,Cash,Poor,Liquor,450.00,0
+10,Detroit Velvet Smooth,35,Detroit,Cash,Fair,Hash,600.00,0
+11,Sebastian Bach,55,Music Industry,Credit Card,Excellent,Liquor,1500.00,0
+12,Orangie,0,Fish Bowl,None,None,Fish Food,0.00,0
+13,Steve French,8,Mountain,None,None,Kitty Food,0.00,0
+14,Shit Hawk,2,Sky,None,None,Garbage,0.00,1
+15,Conky,0,Bubbles' Shed,None,None,Nothing,0.00,100

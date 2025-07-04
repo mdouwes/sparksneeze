@@ -1,0 +1,16 @@
+employee_id,name,age,position,salary,supervisor,car_model,drinks_per_day,scheme_participation
+1,Ricky,31,Convenience Store Manager,25000,Julian,Monte Carlo,15,High
+2,Julian,34,Business Owner,45000,,Firebird,8,Very High
+3,Bubbles,33,Shed Supervisor,18000,Julian,Shopping Cart,2,Medium
+4,Corey,19,Assistant,12000,Trevor,None,5,Low
+5,Trevor,20,Assistant,12000,Ricky,None,6,Low
+6,Randy,36,Assistant Trailer Park Supervisor,22000,Mr. Lahey,None,12,Medium
+7,Jim Lahey,54,Trailer Park Supervisor,35000,,Cadillac,20,Low
+8,Jacob,22,Trinity's Boyfriend,8000,Trinity,Dirt Bike,4,Medium
+9,Trinity,19,Student/Entrepreneur,15000,Ricky,None,3,High
+10,Cory,19,Trevor's Friend,11000,Trevor,None,5,Low
+11,Conky,0,Ventriloquist Dummy,0,Bubbles,None,0,None
+12,Lucy,28,Dancer,20000,,Honda Civic,6,Medium
+13,Sarah,26,Ricky's Ex,16000,,Sedan,8,Low
+14,Tyrone,35,Business Associate,30000,Julian,BMW,5,High
+15,Cyrus,40,Criminal,50000,,Corvette,10,Very High

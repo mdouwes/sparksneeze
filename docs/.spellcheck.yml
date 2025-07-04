@@ -1,0 +1,46 @@
+# Spell checking configuration for SparkSneeze documentation
+matrix:
+- name: markdown
+  aspell:
+    lang: en
+    d: en_US
+  dictionary:
+    wordlists:
+    - .wordlist.txt
+  pipeline:
+  - pyspelling.filters.markdown:
+      markdown_extensions:
+      - pymdownx.superfences:
+      - pymdownx.highlight:
+          css_class: highlight
+  - pyspelling.filters.html:
+      comments: false
+      attributes:
+      - title
+      - alt
+      ignores:
+      - code
+      - pre
+      - script
+      - style
+  sources:
+  - '**/*.md'
+  - '**/*.rst'
+  hunspell:
+    d: en_US
+
+- name: python
+  aspell:
+    lang: en
+    d: en_US
+  dictionary:
+    wordlists:
+    - .wordlist.txt
+  pipeline:
+  - pyspelling.filters.python:
+      strings: true
+      comments: true
+  sources:
+  - '../src/**/*.py'
+  hunspell:
+    d: en_US

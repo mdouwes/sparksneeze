@@ -1,0 +1,116 @@
+[
+  {
+    "product_id": "TPB001",
+    "name": "Hash",
+    "category": "Recreational Products",
+    "price": 40.0,
+    "supplier": "Ricky",
+    "quality_grade": "Decent",
+    "inventory": 50,
+    "description": "Home grown, trailer park quality",
+    "storage_location": {
+      "trailer": "Ricky's",
+      "section": "bedroom_closet",
+      "coordinates": {"x": 10, "y": 15}
+    },
+    "customer_reviews": [
+      {"reviewer": "Jacob", "rating": 4, "comment": "Pretty decent stuff boys"},
+      {"reviewer": "Trinity", "rating": 5, "comment": "Dad grows the best"}
+    ]
+  },
+  {
+    "product_id": "TPB002", 
+    "name": "Pepperoni Sticks",
+    "category": "Food & Snacks",
+    "price": 8.99,
+    "supplier": "Ricky",
+    "quality_grade": "Greasy",
+    "inventory": 200,
+    "description": "Gas station pepperoni, eaten by the handful",
+    "storage_location": {
+      "trailer": "Ricky's",
+      "section": "kitchen_counter",
+      "coordinates": {"x": 5, "y": 3}
+    },
+    "customer_reviews": [
+      {"reviewer": "Bubbles", "rating": 5, "comment": "Cock-a-doodle-doo! I love pepperoni!"},
+      {"reviewer": "Randy", "rating": 3, "comment": "Makes me feel greasy"}
+    ]
+  },
+  {
+    "product_id": "TPB003",
+    "name": "Shopping Cart",
+    "category": "Transportation",
+    "price": 25.0,
+    "supplier": "Bubbles", 
+    "quality_grade": "Refurbished",
+    "inventory": 15,
+    "description": "Liberated from various grocery stores, fully functional",
+    "storage_location": {
+      "trailer": "Bubbles' Shed",
+      "section": "main_area",
+      "coordinates": {"x": 20, "y": 10}
+    },
+    "customer_reviews": [
+      {"reviewer": "Ricky", "rating": 5, "comment": "Decent cart, boys"},
+      {"reviewer": "Julian", "rating": 4, "comment": "Good for hauling stuff"}
+    ]
+  },
+  {
+    "product_id": "TPB004",
+    "name": "Liquor",
+    "category": "Beverages",
+    "price": 25.99,
+    "supplier": "Julian",
+    "quality_grade": "Premium",
+    "inventory": 100,
+    "description": "Rum and Coke ingredients, Julian's specialty",
+    "storage_location": {
+      "trailer": "Julian's",
+      "section": "bar_area", 
+      "coordinates": {"x": 15, "y": 8}
+    },
+    "customer_reviews": [
+      {"reviewer": "Randy", "rating": 5, "comment": "Helps me deal with Mr. Lahey"},
+      {"reviewer": "Jim Lahey", "rating": 5, "comment": "I am the liquor"}
+    ]
+  },
+  {
+    "product_id": "TPB005",
+    "name": "Kitty Food",
+    "category": "Pet Supplies", 
+    "price": 12.50,
+    "supplier": "Bubbles",
+    "quality_grade": "Premium",
+    "inventory": 75,
+    "description": "High quality food for Bubbles' kitties",
+    "storage_location": {
+      "trailer": "Bubbles' Shed",
+      "section": "kitty_area",
+      "coordinates": {"x": 8, "y": 12}
+    },
+    "customer_reviews": [
+      {"reviewer": "Bubbles", "rating": 5, "comment": "Only the best for my kitties!"},
+      {"reviewer": "Ricky", "rating": 4, "comment": "Kitties seem to like it"}
+    ]
+  },
+  {
+    "product_id": "TPB006",
+    "name": "Stolen Barbecue",
+    "category": "Appliances",
+    "price": 150.0,
+    "supplier": "Corey & Trevor",
+    "quality_grade": "Hot",
+    "inventory": 5,
+    "description": "Liberated from various backyards, gas powered",
+    "storage_location": {
+      "trailer": "Behind Ricky's",
+      "section": "storage_area",
+      "coordinates": {"x": 25, "y": 20}
+    },
+    "customer_reviews": [
+      {"reviewer": "Julian", "rating": 3, "comment": "Boys, this is risky business"},
+      {"reviewer": "Ricky", "rating": 5, "comment": "Decent way to make money"}
+    ]
+  }
+]
