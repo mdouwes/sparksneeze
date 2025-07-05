@@ -1,10 +1,10 @@
 name: Examples
 
 on:
-  push:
-    branches: [ main, develop ]
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main ]
+  push:
+    branches: [ main ]
   schedule:
     - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM
 
