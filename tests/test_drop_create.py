@@ -196,7 +196,7 @@ class TestStrategyDropCreate:
 
         # Verify schema is completely replaced
         final_schema = target.get_schema()
-        field_names = [field.name for field in final_schema.fields]
+        field_names = [field.name for field in final_schema.fields] if final_schema else []
 
         # New schema fields should exist
         assert "product_name" in field_names
