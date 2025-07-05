@@ -27,8 +27,11 @@ class DeltaTarget(DataTarget):
         super().__init__(path, spark_session, **options)
         # Store original path for catalog table detection
         self._original_path = path.strip()
-        # Only resolve to absolute path for filesystem paths, not catalog tables
+        # Only resolve to absolute path for filesystem paths, not catalog tables or cloud URIs
         if self._is_catalog_table_name(path):
+            self.path = path.strip()
+        elif self._is_fabric_onelake_path(path) or any(path.startswith(prefix) for prefix in ["s3://", "hdfs://", "abfss://", "gs://", "adl://"]):
+            # Don't resolve cloud URIs - keep them as-is
             self.path = path.strip()
         else:
             self.path = str(Path(path).resolve())
@@ -141,6 +144,11 @@ class DeltaTarget(DataTarget):
         """Determine if this is a catalog table vs path-based table."""
         return self._is_catalog_table_name(self._original_path)
 
+    def _is_fabric_onelake_path(self, path: str) -> bool:
+        """Determine if this is a Microsoft Fabric OneLake path."""
+        return "onelake.dfs.fabric.microsoft.com" in path.lower()
+
+
     def drop(self) -> None:
         """Remove Delta table completely (structure and data)."""
         try:
@@ -151,23 +159,34 @@ class DeltaTarget(DataTarget):
                     sql = f"DROP TABLE IF EXISTS {validated_table_name}"
                     self.spark_session.sql(sql)
                 else:
-                    # For path-based Delta tables, physically remove the directory
-                    # This works with all storage backends (local, ABFSS, S3, etc.)
-                    # Use Hadoop filesystem operations through Spark
-                    hadoop_conf = (
-                        self.spark_session.sparkContext._jsc.hadoopConfiguration()
-                    )
-                    fs = self.spark_session.sparkContext._jvm.org.apache.hadoop.fs.FileSystem.get(
-                        hadoop_conf
-                    )
-                    path = (
-                        self.spark_session.sparkContext._jvm.org.apache.hadoop.fs.Path(
-                            self.path
+                    # For Microsoft Fabric OneLake paths, use a different approach
+                    if self._is_fabric_onelake_path(self.path):
+                        # Try to use Delta Lake's native deletion for OneLake
+                        try:
+                            delta_table = DeltaTable.forPath(self.spark_session, self.path)
+                            delta_table.delete()  # Delete all data
+                        except Exception:
+                            # If Delta delete fails, skip physical deletion for OneLake
+                            # OneLake may not support direct filesystem operations
+                            pass
+                    else:
+                        # For path-based Delta tables, physically remove the directory
+                        # This works with all storage backends (local, ABFSS, S3, etc.)
+                        # Use Hadoop filesystem operations through Spark
+                        hadoop_conf = (
+                            self.spark_session.sparkContext._jsc.hadoopConfiguration()
                         )
-                    )
+                        fs = self.spark_session.sparkContext._jvm.org.apache.hadoop.fs.FileSystem.get(
+                            hadoop_conf
+                        )
+                        path = (
+                            self.spark_session.sparkContext._jvm.org.apache.hadoop.fs.Path(
+                                self.path
+                            )
+                        )
 
-                    if fs.exists(path):
-                        fs.delete(path, True)  # True means recursive deletion
+                        if fs.exists(path):
+                            fs.delete(path, True)  # True means recursive deletion
         except Exception as e:
             # If we can't drop the table, log warning but continue - the write will overwrite
             # Using print since logger may not be available in this context
