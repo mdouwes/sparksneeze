@@ -12,7 +12,7 @@ try:
     __version__ = version("sparksneeze")
 except ImportError:
     # Fallback for older Python versions or development installs
-    __version__ = "0.1.3"
+    __version__ = "0.1.4"
 __all__ = [
     "main",
     "sparksneeze",
