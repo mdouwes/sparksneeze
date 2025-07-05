@@ -204,7 +204,8 @@ examples/targets/**/_delta_log/*.crc
 !examples/targets/**/_delta_log/00000000000000000000.crc
 
 # Local-only files
-*.local.md.vscode/
+*.local.md
+.vscode/
 
 # Spark artifacts
 spark-warehouse/
