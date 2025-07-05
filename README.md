@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner/banner-medium.webp" alt="SparkSneeze Banner" />
+<img src="https://raw.githubusercontent.com/mdouwes/sparksneeze/main/assets/banner/banner-medium.webp" alt="SparkSneeze Banner" />
 
 **A Python library for data warehouse transformations using Apache Spark with a strategy-based approach.**
 
