@@ -45,7 +45,7 @@ JSON containing system metadata about the processing operation:
 .. code-block:: json
 
    {
-     "sparksneeze_version": "0.1.3",
+     "sparksneeze_version": "0.1.4",
      "strategy": "DropCreate", 
      "created_at": "2025-06-19T10:30:00Z",
      "user": "system"
