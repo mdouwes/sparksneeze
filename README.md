@@ -7,8 +7,7 @@
 [🌐 Documentation](https://sparksneeze.readthedocs.io/) • [💬 Discussions](https://github.com/mdouwes/sparksneeze/discussions)
 
 <p align="center">
-<a href="https://pypi.org/project/sparksneeze"><img alt="PyPI" src="https://img.shields.io/pypi/v/sparksneeze.svg?style=flat-square"></a>
-<a href="https://pypi.org/project/sparksneeze"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/sparksneeze?style=flat-square"></a>
+<a href="https://pypi.org/project/sparksneeze"><img alt="PyPI - Version" src="https://img.shields.io/pypi/v/sparksneeze.svg?style=flat-square"></a>
 <a href="https://github.com/mdouwes/sparksneeze/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/mdouwes/sparksneeze/ci.yml?style=flat-square"></a>
 <a href="https://codecov.io/gh/mdouwes/sparksneeze"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/mdouwes/sparksneeze?style=flat-square"></a>
 <a href="https://github.com/mdouwes/sparksneeze/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/mdouwes/sparksneeze?style=flat-square"></a>
